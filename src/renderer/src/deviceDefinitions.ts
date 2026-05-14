@@ -751,7 +751,18 @@ const definitions: DeviceDefinition[] = [
   },
   {
     key: "meter",
-    matchers: ["meter plus", "meter pro co2", "meter pro", "outdoor meter", "meter"],
+    matchers: [
+      "meter plus",
+      "meter pro co2",
+      "meter pro",
+      "outdoor meter",
+      "meter",
+      "WoIOSensor",        // ← dein IP65 Thermo-Hygrometer
+      "woiosensor",
+      "io sensor",
+      "outdoor thermo",
+      "ip65"
+    ],
     statusFields: [
       ...tempHumidityFields,
       {
@@ -759,6 +770,8 @@ const definitions: DeviceDefinition[] = [
         label: "CO2",
         formatter: (value) => (value === undefined || value === null ? undefined : `${value} ppm`),
       },
+    ],
+  },
     ],
   },
   {

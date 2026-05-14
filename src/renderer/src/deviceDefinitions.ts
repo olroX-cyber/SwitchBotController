@@ -761,8 +761,6 @@ const definitions: DeviceDefinition[] = [
       },
     ],
   },
-    ],
-  },
   {
     key: "hub2",
     matchers: ["hub 2"],
